@@ -8,15 +8,21 @@
     <link rel="stylesheet" href="./main.css">
 </head>
 <body>
-    <section>
-            <h1><strong>my goals</strong></h1>
-            <ol>
-        <li><a href="#html">for html</a></li>
-        <li><a href="#net">for .net</a></li>
-            </ol>
-            <a href=""></a>
-    </section>
+    <nav>
+            <header>
+        <section>
+                <h1><strong>my goals</strong></h1>
+                <ol>
+            <li><a href="#html">for html</a></li>
+            <li><a href="#net">for .net</a></li>
+                </ol>
+                <a href=""></a>
+        </section>
+        </header>
+    </nav>
+    <!-- to show the code -->
     <code>&lt;h1&gt;welcome;&lt;/h1&gt;</code>
+    <code>&</code>
     <section id ="html">
         <h1><strong>im ready to learn html</strong></h1>
         <p>my first web page</p>
@@ -61,5 +67,138 @@
        <dd>abstraction</dd>
     </ol>
     <hr>
+    <aside>
+        <details>
+            <summary>when it is opened</summary>
+        </details>
+    </aside>
+    <table>
+            <thead>
+            <caption>my daily schedule</caption>
+            <tr>
+                <th></th>
+                <th scope="col">time</th>
+                <th scope="col">activity</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <th scope="row">morning</th>
+            <td>
+                <time datetime="8:00">8 am</time>-<time datetime="11:00">11 am</time>
+            </td>
+            <td>
+                wite code
+            </td>
+            </tr>
+            <tr>
+                <th scope="row">afternoon</th>
+            <td>
+                <time datetime="12:00"> 12pm</time>-<time datetime="4:00">4 pm</time>
+            </td>
+            <td>
+                code again
+            </td>
+            </tr>
+            <tr>
+                <th scope="row">break</th>
+            <td>
+                <time datetime="11:00"> 11am</time>-<time datetime="12:00">12 pm</time>
+            </td>
+            <td>
+                break
+            </td>
+            </tr>
+            <tr>
+                <th scope="row">evening</th>
+                <td rowspan="2">all other time</td>
+                <td>eat</td>
+            </tr>
+            <tr>
+                <td>sleep</td>
+            </tr>
+        </tbody>
+        <tfoot>
+            <tr>
+                <td colspan="3">this is what i do</td>
+            </tr>
+        </tfoot>
+    </table>
+    <article>
+        <caption><h1>user details</h1></caption>
+        <form action="http://httpbin.org/post">
+            <fieldset>
+                <legend>mandatory</legend>
+            <p>
+                <label for="firstname">first name</label>
+                <input type="text"name="firstname" id="firstname" placeholder="text" autocomplete="on" required autofocus>
+             </p>
+             <p>
+                <label for="lastname">last name</label>
+                <input type="text"name="lastname" id="lastname" placeholder="text" autocomplete="on" required autofocus>
+             </p>
+             <p>
+                <label for="pwd">password</label>
+                <input type="password"name="pwd" id="pwd" placeholder="secret"  required >
+             </p>
+             <p>
+                <label for="phone">phone number</label>
+                <input type="tel" name="phone" id="phone" placeholder="5555555555" autocomplete="on" pattern="[0-9]{3}[0-9]{3}[0-9]{4}" autofocus>
+             </p>
+             <p>
+                <label for="decade">decade</label>
+                <input type="number" name="decade" id="deade" min="1980" max="2020" step="10" value="1980">
+             </p>
+             <p>
+                <label for="coffee">favourite coffee:</label>
+                <select name="coffe" id="coffe" multiple size="5">
+                    <optgroup label="coffe">
+                    <option value="cold">cold</option>
+                    <option value="hot">hot</option>
+                </optgroup>
+                <optgroup label="tea">
+                    <option value="">black tea</option>
+                    <option value="">milktea</option>
+                </optgroup>
+                </select>
+             </p>
+            </fieldset>
+            <fieldset>
+                <input type="radio" name="food" id="food">
+                <label for="fish">fish</label>
+                <br>
+                <input type="radio" name="food" id="food">
+                <label for="meat">meat</label>
+                <br>
+                <input type="radio" name="food" id="food">
+                <label for="panneer">paneer</label>
+                <br>
+            </fieldset>
+            <fieldset>
+                <h2>lelect your fav pet</h2>
+                <input type="checkbox" name="check" id="">
+                <label for="dog">dog</label>
+                <br>
+                <input type="checkbox" name="check" id="">
+                <label for="cat">cat</label>
+                <br>
+                <input type="checkbox" name="check" id="">
+                <label for="fish">fish</label>
+                <br>
+                <input type="checkbox" name="check" id="">
+                <label for="other">other</label>
+                <br>
+            </fieldset>
+            <fieldset>
+                <button type="submit">submit</button>
+                <button type="reset" formaction="http://httpbin.org/post">reset</button>
+            </fieldset>
+            <fieldset>
+                <legend>type a text</legend>
+                <label for="messgage">your message</label>
+                <textarea name="message" id="" cols="30" rows="10"placeholder="text"></textarea>
+            </fieldset>
+        </form>
+    </article>
 </body>
 </html>
